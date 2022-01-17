@@ -1,0 +1,20 @@
+ <header>
+     <nav class="navbar navbar-expand-md nav-dark bg-dark">
+         <div><a class="navbar-brand">HMS</a></div>
+
+         <ul class="navbar-nav">
+            <li><a *ngIf="hardcodedAutehnticationService.isUserLoggedIn()" routerLink="/welcome/anusha" class="nav-link">Home</a></li>
+            <li><a *ngIf="hardcodedAutehnticationService.isUserLoggedIn()" routerLink="/list-doctors" class="nav-link">Doctors</a></li>
+            <li><a *ngIf="hardcodedAutehnticationService.isUserLoggedIn()" routerLink="/list-patients" class="nav-link">Patients</a></li>
+         </ul>
+
+         <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!hardcodedAutehnticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+            <li><a *ngIf="hardcodedAutehnticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+         </ul>
+     </nav>
+ </header>
+
+ <div class="header">
+        <h1 class="display-3">Hospital Management System</h1>
+</div>

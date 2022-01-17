@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="tableWrap">
+        <div class="heading">
+            <h4 class="display-4">Show Information of Patient</h4>
+        </div>
+        <!-- <div class="dropdown">
+            <label for="doctor">Select Patient</label>
+            <div class="input-group input-group-sm mb-3">
+                <select class="btn btn-secondary" [(ngModel)]="selectedPatient.id" (change)="onSelect($event.target)">
+                    <option value="0">--Select patient--</option>
+                    <option *ngFor="let patient of patients" [value]="patient.id">{{patient.name}}</option>
+                </select>
+            </div>
+        </div> -->
+
+        <div class="input-group input-group-sm mb-3">
+            <form (ngSubmit)="!patientForm.invalid && onSelect($event.target)" #patientForm="ngForm">
+                <div class="mb-3">
+                    <label class="form-label">Enter Id</label>
+                    <input type="text" #patientForm="ngModel" name="id" required="required" class="form-control" [(ngModel)]="selectedPatient.id" >
+                  </div>
+                <button class="btn btn-secondary" >Search</button>
+            </form>
+        </div>     
+
+        <div class="alert alert-warning" *ngIf="!isSelectedPatient && patientForm.dirty">
+            No Such Patient
+        </div>
+
+        <table class="table table-dark table-hover">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Visited Doctor</th>
+                <th>Date of Visit</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{selectedPatient.id}}</td>
+                    <td>{{selectedPatient.name}}</td>
+                    <td>{{selectedPatient.age}}</td>
+                    <td>{{selectedPatient.visitedDoctor }}</td>
+                    <td>{{selectedPatient.dateOfVisit | date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

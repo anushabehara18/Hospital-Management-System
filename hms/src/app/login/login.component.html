@@ -1,0 +1,22 @@
+<!-- <div class="alert alert-warning" *ngIf="invalidLogin">{{errorMessage}}</div>
+
+<div>
+Username:<input type="text" name="username" [(ngModel)]="username">
+Password:<input type="password" name="password" [(ngModel)]="password">
+
+<button class="btn btn-success" (click)="login()">Login</button>
+</div> -->
+<div class="container">
+<div class="alert alert-warning" *ngIf="invalidLogin">{{errorMessage}}</div>
+<form>
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control" [(ngModel)]="username" name="username">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+  </form>
+</div>

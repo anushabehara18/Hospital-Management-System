@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="tableWrap">
+        <div class="heading">
+            <h4 class="display-4">List of Patients</h4>
+        </div>
+        <table class="table table-stripped">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Visited Doctor</th>
+                <th>Date of Visit</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let patient of patients">
+                    <td>{{patient.id}}</td>
+                    <td>{{patient.name}}</td>
+                    <td>{{patient.age}}</td>
+                    <td>{{patient.visitedDoctor }}</td>
+                    <td>{{patient.dateOfVisit|date:'dd-MM-yyyy' }}</td>
+                    <td><button (click)="deletePatient(patient.id)" class="btn btn-warning">Delete</button></td>
+                    <td><button (click)="updatePatient(patient.id)" class="btn btn-success">Update</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="add">
+            <button type="submit" class="btn btn-success" (click)="addPatient()">Add</button>
+          </div>
+    </div>
+</div>
+
+  
+

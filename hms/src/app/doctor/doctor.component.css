@@ -1,0 +1,26 @@
+.container{
+    margin-top: 50px; 
+}
+.heading{
+    margin-bottom: 20px;
+}
+.heading h4{
+    text-align: center;
+    font-style: oblique;
+}
+.form{
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    padding:30px;
+}
+.form h4{
+    font-style: oblique;
+    font-size: 40px;
+}
+.form-label{
+    font-weight:bold ;
+}
+.ng-invalid:not(form){
+    border-left:5px solid red;
+}

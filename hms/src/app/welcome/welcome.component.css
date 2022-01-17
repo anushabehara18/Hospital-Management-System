@@ -1,0 +1,25 @@
+
+.welcome,.home,.doctor,.patient{
+    margin:20px;
+}
+.home,.doctor,.patient{
+    margin:20px;
+    border: 1px solid grey ;
+    padding: 20px;
+}
+.display-4{
+    color: black;
+    font-style: oblique;
+}
+ul{
+    list-style-type:disc;
+}
+.welcome{
+    display: flex;
+}
+.welcome h3{
+    text-decoration: dotted;
+    font-weight: normal;
+    font-style: normal;
+    color: gray;
+}

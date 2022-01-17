@@ -1,0 +1,11 @@
+.footer{
+    margin-top: 100px;
+   position: static;
+    bottom:0;
+    height: 40px;
+    width: 100%;
+    background-color: #222222;
+}
+.text-white{
+    color: white;
+}
